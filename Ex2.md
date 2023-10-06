@@ -38,53 +38,61 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
-
-
+~~~
+delete managerss1 where salary<2750;
+~~~
 ### OUTPUT:
+
+![WhatsApp Image 2023-10-05 at 10 34 53_17750bba](https://github.com/21005984/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/94748389/83909a25-c950-40cc-ab1e-c7d9191fdb66)
 
 ### Q3) Display each name of the employee as “Name” and annual salary as “Annual Salary” (Note: Salary in emp table is the monthly salary)
-
-
 ### QUERY:
-
-
+~~~
+SELECT
+empname AS "empname",
+salary*12 AS "Annual Salary"
+from
+managerss;
+~~~
 ### OUTPUT:
+
+![WhatsApp Image 2023-10-05 at 10 37 12_2dd8367c](https://github.com/21005984/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/94748389/adec2aea-dc90-4cfa-bf78-e07cc58f92f5)
 
 ### Q5)	List the names of Clerks from emp table.
-
-
 ### QUERY:
-
-
+~~~
+select empname from managerss where designation != 'manager';
+~~~
 ### OUTPUT:
 
+![WhatsApp Image 2023-10-05 at 10 37 41_c7ddb672](https://github.com/21005984/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/94748389/6bf20319-6d5f-44b6-a180-2d29e9dec0d7)
 
 ### Q6)	List the names of employee who are not Managers.
-
-
 ### QUERY:
-
-
+~~~
+select empname from managerss where designation != 'manager';
+~~~
 ### OUTPUT:
 
+![WhatsApp Image 2023-10-05 at 10 37 56_53717b66](https://github.com/21005984/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/94748389/6526bd88-7fd4-48e2-96d9-cf5c2d2d9529)
 
 ### Q7)	List the names of employees not eligible for commission.
-
-
 ### QUERY:
-
-
+~~~
+select empname from managerss where commission = 0;
+~~~
 ### OUTPUT:
 
+![WhatsApp Image 2023-10-05 at 10 38 15_f371a461](https://github.com/21005984/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/94748389/2719f913-3097-402e-ace7-cb38e7c9d972)
 
 ### Q8)	List employees whose name either start or end with ‘s’.
-
-
 ### QUERY:
-
-
+~~~
+select empname from managerss where empname LIKE 's%' OR empname LIKE '%s';
+~~~
 ### OUTPUT:
 
+![WhatsApp Image 2023-10-05 at 10 38 53_6dce431b](https://github.com/21005984/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/94748389/bd86733d-4c11-461f-8594-fefa5cf17202)
 
 ### Q9) Sort emp table in ascending order by hire-date and list ename, job, deptno and hire-date.
 
